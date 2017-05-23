@@ -1,0 +1,26 @@
+body {
+  font-family: sans-serif;
+  font-size: 14px;
+}
+
+a.edit, button.delete {
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  padding: 10px;
+  margin: 5px;
+  font-size: 12px;
+  display: inline-block;
+}
+
+a.edit {
+  background-color: green;
+  color: white;
+  border: solid green 1px;
+}
+
+button.delete {
+  background-color: red;
+  color: white;
+  border: solid red 1px;
+}

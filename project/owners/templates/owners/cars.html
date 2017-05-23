@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+  <p>Owner is: {{owner.first_name}} {{owner.last_name}}</p>
+  <ol>
+  {% for car in owner.cars %}
+    <li>{{car.model}}</li>
+  {% endfor %}
+  </ol>
+
+{% endblock %}

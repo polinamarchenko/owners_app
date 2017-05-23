@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<p>All cars:</p>
+  <a href="{{url_for('cars.new')}}">Create a new Car</a>
+<ol>
+{% for car in cars %}
+  <li>{{car.model}}</li>
+  <a class="edit" href="{{url_for('cars.edit', id=car.id)}}">Edit</a>
+  <form action="{{url_for('cars.show', id=car.id)}}?_method=DELETE" method="post">
+  <button class="delete" type="submit">Delete</button>
+</form>
+{% endfor %}
+</ol>
+{% endblock%}

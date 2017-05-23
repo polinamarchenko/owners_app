@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <p>{{car.model}} {{car.owner_id}}</p>
+  <p>Delete me?</p>
+
+  <form action="{{url_for('cars.show', id=car.id)}}?_method=DELETE" method="post">
+    <input type="submit" value="Delete">
+  </form>
+{% endblock %}

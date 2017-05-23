@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<form action="{{url_for('cars.index')}}" method="post">
+    {{ form.csrf_token }}
+  <p>
+    {{ form.model.label }}
+    {{ form.model }}
+    <span>
+      {% if form.model.errors %}
+        {% for error in form.model.errors %}
+          {{ error }}
+        {% endfor %}
+      {% endif %}
+    </span>
+  </p>
+
+  <p>
+    {{ form.owner_id.label }}
+    {{ form.owner_id }}
+    <span>
+      {% if form.owner_id.errors %}
+        {% for error in form.owner_id.errors %}
+          {{ error }}
+        {% endfor %}
+      {% endif %}
+    </span>
+  </p>
+  <button type="submit"> Add a new car</button>
+</form>
+
+{% endblock %}
