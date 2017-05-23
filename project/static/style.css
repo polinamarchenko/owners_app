@@ -3,24 +3,55 @@ body {
   font-size: 14px;
 }
 
-a.edit, button.delete {
+a.edit,
+button.delete,
+a.new,
+button.new,
+input[type="submit"] {
   color: white;
   border-radius: 5px;
   text-decoration: none;
   padding: 10px;
-  margin: 5px;
   font-size: 12px;
-  display: inline-block;
 }
 
 a.edit {
-  background-color: green;
-  color: white;
-  border: solid green 1px;
+  background-color: #348F4C;
+  border: solid #348F4C 1px;
+  margin-left: 45px;
+  display: inline-block;
 }
 
 button.delete {
-  background-color: red;
+  background-color: #DA2F34;
+  border: solid #DA2F34 1px;
+  margin-left: 0;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+a.new {
+  background-color: #C6DD70;
+  border: solid #C6DD70 1px;
+  display: inline-block;
+  color: black;
+}
+
+input[type="submit"] {
+  background-color: #DA2F34;
+  border: solid #DA2F34 1px;
+}
+
+li.item {
+  margin: 5px;
+  padding: 5px;
+}
+
+i.fa {
   color: white;
-  border: solid red 1px;
+  font-size:16px;
+}
+
+.outer {
+  width: 50%;
 }

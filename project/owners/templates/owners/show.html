@@ -5,6 +5,6 @@
   <p>Delete me?</p>
 
   <form action="{{url_for('owners.show', id=owner.id)}}?_method=DELETE" method="post">
-    <input type="submit" value="Delete">
+    <input class="delete" type="submit" value="Delete">
   </form>
 {% endblock %}

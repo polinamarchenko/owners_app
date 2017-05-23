@@ -1,14 +1,14 @@
 {% extends 'base.html' %}
 
 {% block content %}
-  <a href="{{url_for('owners.new')}}">Create a new Owner</a>
-<ol>
+  <a class="new" href="{{url_for('owners.new')}}">Create a new Owner</a>
+<ol class="outer">
 {% for owner in owners %}
-  <li>{{owner.first_name}} {{owner.last_name}}</li>
+  <li class="item">{{owner.first_name}} {{owner.last_name}}</li>
   <form action="{{ url_for('owners.show', id=owner.id)}}?_method=DELETE" method="post">
-    <button type="submit">Delete this owner</button>
+    <button class="delete" type="submit"><i class="fa fa-trash" aria-hidden="true"></i></button>
   </form>
-  <a href="{{url_for('owners.edit', id=owner.id)}}">Edit this owner</a>
+  <a class="edit" href="{{url_for('owners.edit', id=owner.id)}}"><i class="fa fa-pencil" aria-hidden="true"></i></a>
 
 {% endfor %}
 </ol>
